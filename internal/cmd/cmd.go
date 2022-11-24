@@ -23,6 +23,12 @@ var (
 					controller.Hello,
 				)
 			})
+			s.Group("/user", func(group *ghttp.RouterGroup) {
+				group.Bind(
+					controller.User,
+				)
+			})
+
 			s.Run()
 			return nil
 		},
